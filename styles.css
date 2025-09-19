@@ -81,6 +81,12 @@ html, body {
     display: block;
 }
 
+.rodape__logo{
+    width: 50%;
+    width: 150;
+    height: 200;
+}
+
 .container__caixa {
     margin: 0 1em;
 }
