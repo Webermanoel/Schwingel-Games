@@ -79,6 +79,9 @@ html, body {
     margin: 1em 0;
     height: auto;
     display: block;
+    width: 50%;
+    width: 150;
+    height: 200;
 }
 
 .rodape__logo{
