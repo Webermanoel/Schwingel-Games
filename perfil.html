@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>login</title>
+    <link rel="stylesheet" href="perfil.css">
+</head>
+<body>
+    <div class="user-container"></div>
+    <a class="apresentacao__links__login">
+        <img class="apresentacao__login__imagem" src="img2/Usuario.svg" alt="Ícone pessoas">
+        Usar telefone/e-mail/nome de usuário
+    </a>
+
+    <div class="login_site">
+        <form id="login">
+            <label for="nome">telefone/e-mail/nome de usuário</label><br>
+            <input class="campo_pre" type="text" id="nome" name="nome" required><br>
+    
+            <label for="senha">Senha:</label><br>
+            <div style="position: relative;">
+                <input class="campo_pre" type="password" id="senha" name="senha" required style="padding-right: 40px;">
+                <button type="button" id="toggleSenha" style="position: absolute; right: 5px; top: 50%; transform: translateY(-50%); border: none; background: none; cursor: pointer;">
+                    👁️
+                </button>
+            </div><br>
+    
+            <button class="entrar_login" type="submit">Entrar</button>
+        </form>
+    </div>
+    
+    
+    <a class="link_voltar" href="index2.html">
+        <img class="link_image" src="img2/logo.jpeg" alt="icon">
+        Voltar
+    </a>
+
+    <script src="login-client.js"></script>
+    <script src="perfil.js" defer></script>
+    <script>
+        const toggleSenha = document.getElementById('toggleSenha');
+        const senhaInput = document.getElementById('senha');
+      
+        toggleSenha.addEventListener('click', () => {
+          const tipo = senhaInput.getAttribute('type') === 'password' ? 'text' : 'password';
+          senhaInput.setAttribute('type', tipo);
+          toggleSenha.textContent = tipo === 'password' ? '👁️' : '🙈';
+        });
+      </script>
+      
+</body>
+</html>
